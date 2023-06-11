@@ -1,0 +1,83 @@
+
+@import "typography.css";
+@import "main.css";
+@import "story.css";
+@import "landing.css";
+@import "sidebar.css";
+@import "footer.css";
+
+
+:root {
+
+  /* COLOR VARIABLES */
+  --color-btn: #c69963;
+  --color-btn-hover: #946e38;
+  --color-footer-bg:#fbf9f9;
+  --color-footer:#403321;
+  --color-side:#f0ffff;
+
+  /* FONT VARIABLES */
+  --font-primary: 'Nunito', sans-serif;
+  --font-display: 'Josefin Sans', sans-serif;
+
+   /* RESPONSIVE BREAKPOINTS */
+  --bp-largest: 75em;    /* 1200px */
+  --bp-large: 62.5em;   /* 1000px */
+  --bp-medium: 50em;    /* 800px */
+  --bp-small: 37.5em;    /* 600px */
+
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+}
+
+@media only screen and (max-width: 75em) {
+  html{font-size: 50%};
+}
+
+
+body {
+    font-family:var(--font-primary);
+    color: #6D5D4B;
+    font-weight: 300;
+    line-height: 1.6; }
+
+.container{
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  grid-template-rows: repeat(2,100vh) min-content;
+  background-image: linear-gradient(rgba(52, 45, 37, 0.9) ,rgba(52, 47, 41, 0.9) ),url(../images/Didi.jpeg);
+  background-size: cover;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  };
+}
+
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: var(--font-display);
+  font-weight: 400; }
+
+
+
+
+
+
